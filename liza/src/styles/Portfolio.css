@@ -1,0 +1,136 @@
+/* Portfolio.css - полный рабочий вариант */
+
+/*редакция отображения */
+.portfolio {
+    padding: 40px 20px;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+.portfolioSwiper {
+     max-width: 400px;
+    max-height: 400px;
+}
+
+/*редакция отображения */
+
+
+.portfolio h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.portfolio p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.portfolio-swiper {
+    width: 100%;
+    height: 500px; /* Начальная высота */
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Уменьшаем высоту карусели */
+.portfolio-swiper {
+    height: 450px; /* Уменьшенная высота */
+}
+
+.project-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Уменьшаем изображение */
+.project-image {
+    width: 100%;
+    height: 250px !important; /* Принудительно задаем высоту */
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.project-info {
+    flex-grow: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95));
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Стили для навигации Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    background: rgba(0, 0, 0, 0.6);
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1rem !important;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .portfolio-swiper {
+        height: 400px;
+    }
+    
+    .project-image {
+        height: 200px !important;
+    }
+    
+    .project-info {
+        padding: 15px;
+    }
+    
+    .project-info h4 {
+        font-size: 1.1rem;
+    }
+    
+    .project-info p {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+

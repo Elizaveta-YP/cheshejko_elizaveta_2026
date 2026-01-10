@@ -1,0 +1,23 @@
+/*общие стили*/
+@import '../styles/variables.css';
+
+.navItems {
+  list-style: none;
+}
+
+.navLink {
+   text-decoration: none;
+   color: var(--text);
+}
+
+.navList {
+  text-decoration: none;
+  display: flex; /* ← делает список горизонтальным */
+   justify-content: space-between;
+
+}
+
+.textSection {
+  font-family: var(--all-text);
+  font-size: var(--size-text);
+}

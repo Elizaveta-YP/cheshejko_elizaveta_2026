@@ -1,0 +1,18 @@
+/*универсальные переменные*/
+:root {
+    /*цвета*/
+    --highlight: #CEACE1;
+    --title: #DE3A87;
+    --text: #3A3DDE;
+    --standOut: #fff;
+    /*шрифты*/
+    --header-h1: 'Calluna';
+    --all-text: 'Bree';
+    /*размеры*/
+    --size-title: 28px;
+    --size-subtitle: 24px;
+    --size-text: 20px;
+    /*толщина*/
+    --weight: 600; 
+    /*тени*/
+}

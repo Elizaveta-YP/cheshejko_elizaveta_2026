@@ -1,0 +1,210 @@
+@import "../styles/variables.css";
+.titleAboutMe {
+  color: var(--title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--size-title);
+  margin: 40px;
+}
+
+/* .arrangementOfElements {
+     display: grid;
+    grid-template-columns: 1fr 1fr; /* Две равные колонки *
+    gap: 40px;  Расстояние между колонками *
+    align-items: center; /* Выравнивание по вертикали *
+} */
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ДВЕ РАВНЫЕ КОЛОНКИ */
+  gap: 60px; /* Расстояние между колонками */
+  align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+.about-section:first-child .section-grid {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.profilePhoto {
+  max-width: 100%; /* Не больше ширины контейнера */
+  max-height: 400px;
+  border: 8px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #ff69b4, #ff1493) border-box;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.sectionImage {
+    display: flex;
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center; /* Вертикальное центрирование */
+  width: 100%;
+}
+
+.hobbyCardTitle {
+  font-size: var(--size-subtitle);
+}
+
+.hobbyDescription {
+  font-size: var(--size-text);
+}
+
+.acquaintance {
+  /* border-inline-end: 5px solid; */
+  border-block-end: 5px solid;
+  border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) 1;
+  /* чтобы контент не прижимался к рамке */
+}
+
+/* СЕТКА ДЛЯ ХОББИ */
+.hobbiesContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.hobbiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
+  gap: 30px; /* Расстояние между карточками */
+  width: 100%;
+}
+
+/* КАРТОЧКА ХОББИ */
+.hobbyCard {
+  border: 5px solid var(--title);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Контент начинается сверху */
+  min-height: 400px; /* Минимальная высота для всех карточек одинаковая */
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hobbyCardTitle {
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* КОНТЕЙНЕР ДЛЯ ИЗОБРАЖЕНИЯ */
+.cardImageContainer {
+  /* width: 100%; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* margin-bottom: 20px; */
+  flex-grow: 1; /* Занимает доступное пространство */
+  min-height: 200px; /* Минимальная высота для изображения */
+  display: grid;
+  grid-row: 2;
+  gap: 15px;
+}
+
+.cardOpenedContainer {
+  flex-grow: 1; /* Занимает доступное пространство */
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ИЗОБРАЖЕНИЕ */
+.screensaver {
+  /* width: 100%; 
+    max-width: 100%; */
+  height: 315px; /* Фиксированная высота */
+  object-fit: cover; /* Заполняет контейнер с сохранением пропорций */
+  border-radius: 8px;
+  display: block;
+}
+
+/* КОНТЕЙНЕР ДЛЯ ТЕКСТА */
+.cardTextContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1; /* Занимает все доступное пространство */
+  padding: 10px 0;
+}
+
+.hobbyDescription {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  line-height: 1.6;
+  color: #555;
+}
+
+/*Кнопки*/
+.sectionButtons {
+  background-color: var(--title);
+  border: none;
+  color: var(--standOut);
+  border-radius: 30px;
+  max-height: 20px;
+}
+
+.expandButton {
+  min-height: 40px;
+}
+
+
+.collapseButton {
+  margin-top: auto; /* Это прижимает кнопку к низу */
+  background-color: var(--title);
+  border: none;
+  color: var(--standOut);
+  border-radius: 30px;
+  padding: 10px 20px; /* Добавьте отступы для лучшего вида */
+  min-height: 40px; /* Увеличьте высоту */
+  width: 100%; /* На всю ширину */
+  align-self: center; /* Центрируем по горизонтали */
+}
+
+/*Изображение*/
+/* .sectionImage {
+  min-height: 500px;
+  margin-inline-start: 200px;
+} */
+
+.profilePhoto {
+  min-height: 550px;
+  min-width: 360px
+}
+
+.textSection {
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch; */
+  display: grid;
+  align-content: space-between;
+  height: 80%;
+}
+
