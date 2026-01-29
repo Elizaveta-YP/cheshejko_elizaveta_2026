@@ -9,9 +9,11 @@
     --header-h1: 'Calluna';
     --all-text: 'Bree';
     /*размеры*/
-    --size-title: 28px;
+    --size-title: 36px;
     --size-subtitle: 24px;
-    --size-text: 20px;
+    --size-text: 24px;
+    --size-button: 18px;
+    --size-link: 19px;
     /*толщина*/
     --weight: 600; 
     /*тени*/

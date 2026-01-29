@@ -25,8 +25,7 @@
 .sectionGrid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* ДВЕ РАВНЫЕ КОЛОНКИ */
-  gap: 60px; /* Расстояние между колонками */
-  align-items: center; /* Выравнивание по центру по вертикали */
+  
 }
 
 .about-section:first-child .section-grid {
@@ -37,20 +36,19 @@
 }
 
 .profilePhoto {
-  max-width: 100%; /* Не больше ширины контейнера */
-  max-height: 400px;
+  max-width: 100%;
+  /* max-height: 400px; */
   border: 8px solid transparent;
   background: linear-gradient(white, white) padding-box,
     linear-gradient(45deg, #ff69b4, #ff1493) border-box;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   padding: 5px;
-}
 
-.sectionImage {
-    display: flex;
-  justify-content: center; /* Горизонтальное центрирование */
-  align-items: center; /* Вертикальное центрирование */
-  width: 100%;
+   min-height: 600px; /* Увеличить минимальную высоту */
+  min-width: 400px;  /* Увеличить минимальную ширину */
+  max-width: 100%;   /* Ограничение по ширине контейнера */
+  object-fit: cover; /* Сохранить пропорции и заполнить контейнер */
+  border-radius: 20px; /* Увеличить скругление */
 }
 
 .smallHeadlines {
@@ -93,7 +91,7 @@
 .hobbyCard {
   border: 5px solid var(--title);
   border-radius: 12px;
-  padding: 25px;
+  padding-block-end: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,16 +116,14 @@
 
 /* КОНТЕЙНЕР ДЛЯ ИЗОБРАЖЕНИЯ */
 .cardImageContainer {
-  /* width: 100%; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* margin-bottom: 20px; */
+ display: flex;
+  flex-direction: column; /* Вертикальное расположение */
+  justify-content: center; /* Центрирование по вертикали */
+  align-items: center; /* Центрирование по горизонтали */
   flex-grow: 1; /* Занимает доступное пространство */
   min-height: 200px; /* Минимальная высота для изображения */
-  display: grid;
-  grid-row: 2;
   gap: 15px;
+  width: 100%; /* Занимает всю ширину карточки */
 }
 
 .cardOpenedContainer {
@@ -145,7 +141,8 @@
   height: 315px; /* Фиксированная высота */
   object-fit: cover; /* Заполняет контейнер с сохранением пропорций */
   border-radius: 8px;
-  display: block;
+  display: flex;
+ 
 }
 
 /* КОНТЕЙНЕР ДЛЯ ТЕКСТА */
@@ -175,14 +172,16 @@
   color: var(--standOut);
   border-radius: 30px;
   max-height: 20px;
+  font-size: var(--size-button);
 }
 
 .expandButton {
   min-height: 40px;
+  width: 300px;
 }
 
 
-.collapseButton {
+.collapseButton  {
   margin-top: auto; /* Это прижимает кнопку к низу */
   background-color: var(--title);
   border: none;
@@ -194,24 +193,16 @@
   align-self: center; /* Центрируем по горизонтали */
 }
 
-/*Изображение*/
-/* .sectionImage {
-  min-height: 500px;
-  margin-inline-start: 200px;
-} */
-
 .profilePhoto {
   min-height: 550px;
   min-width: 360px
 }
 
 .textSection {
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: stretch; */
   display: grid;
-  align-content: space-between;
-  height: 80%;
+  /* align-content: space-between; */
   padding-inline: 40px;
+}
+
+@media (max-width: 768px) {
 }

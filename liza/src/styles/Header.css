@@ -5,6 +5,7 @@
   background-color: var(--standOut);
   color: var(--title);
   font-family: var(--header-h1), sans-serif;
+  font-size: var(--size-title);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,32 +40,49 @@
 
 .header {
   border-bottom: var(--highlight);
-  /* padding: 15px 20px;
-    transition: color 0.3s ease; */
   background: linear-gradient(90deg, #fae8e7, #faccf1);
+   width: 100%;
+  overflow: hidden;
 }
 
-/* .container {
-width: 40vw;
-} */
 
 .headers {
   width: 100%;
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+ 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+
+
+   background-color: rgba(88, 185, 176, 0.3); 
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(88, 185, 176, 0.2);
 }
 
+/* Чтобы навигация тоже была sticky, если нужно */
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-block: 20px;
+  position: sticky;
+  top: 80px;
+  z-index: 999;
+  padding: 10px 0;
   
-  /* background-color:linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) 1; */
 }
 
 .navItems {
   /* margin-inline-end: 35px; */
    margin-inline: 20px;
    margin-block: 8px;
+   font-size: var(--size-subtitle);
+}
+
+.navLink:hover {
+  color: #F2CACA;
 }
 
 .navList {
@@ -75,3 +93,8 @@ width: 40vw;
 .navLink {
   color: #fff;
 }
+
+
+
+/*проба*/
+

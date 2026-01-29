@@ -9,7 +9,7 @@ import 'swiper/css/effect-coverflow';
 
 import '../styles/Portfolio.css';
 // import '../styles/AboutMe.css';
-import Popup from './Popup.jsx';
+
 
 import layout_desktop_do_you_need_it from '../images/Layouts/layout_desktop_do_you_need_it.jpg';
 import layout_desktop_look_out_the_window_1 from '../images/Layouts/layout_desktop_look_out_the_window_1.jpg';

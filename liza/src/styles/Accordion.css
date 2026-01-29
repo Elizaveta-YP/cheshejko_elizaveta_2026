@@ -9,10 +9,14 @@
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   margin-bottom: 15px;
-  overflow: visible;
+  overflow: hidden;
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+}
+
+.accordionSection:hover {
+  border-radius: 15px;
 }
 
 .accordionSection.expanded {
@@ -38,7 +42,7 @@
 }
 
 .accordionHeader:hover {
-  background-color: #f8f9fa;
+  background-color: #FCEBEB;
 }
 
 .accordionSection.expanded .accordionHeader {
@@ -51,17 +55,21 @@
 
 .accordionTitle {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--size-title);
   color: var(--title);
   font-weight: 600;
 }
+
+/* .accordionTitle:hover {
+  radius: 20px;
+} */
 
 .accordionSection.expanded .accordionTitle {
  color: #58b9b0;
 }
 
 .accordionIcon {
-  font-size: 1.8rem;
+  font-size: var(--size-title);
   font-weight: 300;
    color: var(--title);
   width: 30px;
