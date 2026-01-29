@@ -164,7 +164,7 @@ const Portfolio = () => {
 
     return (
         <div className="portfolio">
-            <h3>Портфолио</h3>
+            <h3 className="titlePortfolio">Портфолио</h3>
             
             <div className="swiperContainerWrapper">
                 <Swiper 
@@ -193,43 +193,7 @@ const Portfolio = () => {
                     className="portfolioSwiper"
                 >
                     {projects.map(project => (
-                        // <SwiperSlide key={project.id} className="customSlide">
-                        //     <div className="projectSlide">
-                        //         <img 
-                        //             src={project.image}
-                        //             alt={project.alt} 
-                        //             className="projectImage"
-                        //         />
-                        //         <div className="projectInfo">
-                        //             <h4>{project.title}</h4>
-                        //             <p>{project.content}</p>
-            
-                        //             <button
-                        //                 onClick={() => window.open(
-                        //                     project.githubUrl,
-                        //                     '_blank',
-                        //                     'noopener, noreferrer'
-                        //                 )}
-                        //                 className='sectionButtons cardButtons' 
-                        //             >
-                        //                 Посмотреть проект на сайте GitHub
-                        //             </button>
-
-                        //             {project.id !== 5 && project.figmaUrl && (
-                        //             <button
-                        //                 onClick={() => window.open(
-                        //                     project.figmaUrl,
-                        //                     '_blank',
-                        //                     'noopener, noreferrer'
-                        //                 )}
-                        //                 className='sectionButtons cardButtons'
-                        //             >
-                        //                 Посмотреть макет в Figma   
-                        //             </button>
-                        //             )}
-                        //         </div>
-                        //     </div>
-                        // </SwiperSlide>
+                       
                        <SwiperSlide key={project.id} className="customSlide">
   <div className="projectSlide">
     <div className="projectImageContainer">
@@ -279,35 +243,6 @@ const Portfolio = () => {
                     ))}
                 </Swiper>
             </div>
-            {/* <Popup isOpen={isPopupOpen} onClose={handleClosePopup}>
-                {selectedProject && (
-                    <div className="project-popup-content">
-                        <h2 className="popup-title">{selectedProject.title}</h2>
-                        
-                        
-                        <div className="mockups-gallery">
-                            {selectedProject.mockups.map((mockup, index) => (
-                                <div key={mockup.id || index} className="mockup-item">
-                                    <img 
-                                        src={mockup.src} 
-                                        alt={mockup.alt}
-                                        className="mockup-image"
-                                    />
-                                    {mockup.description && (
-                                        <a className="mockup-description">{mockup.description}</a>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                        <button 
-                            className="close-popup-btn sectionButtons"
-                            onClick={handleClosePopup}
-                        >
-                            Закрыть
-                        </button>
-                    </div>
-                )}
-            </Popup> */}
         </div>
     );
 };

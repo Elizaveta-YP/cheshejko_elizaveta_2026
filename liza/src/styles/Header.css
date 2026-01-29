@@ -1,7 +1,9 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Third+Street&display=swap'); */
 @import "../styles/variables.css";
 .logo {
-  background-color: var(--highlight);
+  /* background-color: var(--highlight); */
+  background-color: var(--standOut);
+  color: var(--title);
   font-family: var(--header-h1), sans-serif;
   display: flex;
   align-items: center;
@@ -54,9 +56,22 @@ width: 40vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-block: 20px;
+  
   /* background-color:linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) 1; */
 }
 
 .navItems {
-  margin-inline-end: 35px;
+  /* margin-inline-end: 35px; */
+   margin-inline: 20px;
+   margin-block: 8px;
+}
+
+.navList {
+  background-color: var(--title);
+  border-radius: 20px;
+}
+
+.navLink {
+  color: #fff;
 }

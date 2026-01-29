@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './styles/App.css'; 
 import './styles/reset.css';
 import './styles/variables.css';
 import './styles/index.css';
@@ -16,21 +17,28 @@ import Contacts from './components/Contacts';
 
 function App() {
   const [expandedSections, setExpandedSections] = useState({
-    about: false,   
-    skills: false,
-    project: false,
-    contact: false
+    about: true,   
+    skills: true,
+    project: true,
+    contact: true
   });
 
   const handleSectionClick = (section) => {
   setExpandedSections(prev => {
-    const newState = {};
-    // Закрываем все секции
-    Object.keys(prev).forEach(key => {
-      newState[key] = false;
-    });
-    // Открываем кликнутую секцию
+    const newState = { ...prev };
+    
+    // Переключаем состояние кликнутой секции
     newState[section] = !prev[section];
+    
+    // Если мы открываем секцию, закрываем все остальные
+    if (newState[section]) {
+      Object.keys(newState).forEach(key => {
+        if (key !== section) {
+          newState[key] = false;
+        }
+      });
+    }
+    
     return newState;
   });
 };
@@ -109,7 +117,7 @@ function App() {
         </div>
       </div>
       
-      <Footer />
+      <Footer onNavClick={handleSectionClick} />
     </div>
   );
 }

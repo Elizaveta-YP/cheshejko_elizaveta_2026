@@ -60,7 +60,7 @@
   justify-content: center; */
   white-space: nowrap;
   margin-block-end: 20px;
-
+  color: #58b9b0;
 }
 
 .hobbyDescription {
@@ -213,4 +213,5 @@
   display: grid;
   align-content: space-between;
   height: 80%;
+  padding-inline: 40px;
 }

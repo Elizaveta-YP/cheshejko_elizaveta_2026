@@ -13,12 +13,14 @@
    /* display: flex;
     align-items: center;
     justify-content: center; */
-    order: 1
+    order: 1;
+    color: #58b9b0;
 }
 
 .textContacts {
     margin-inline: 150px;
     margin-block: 40px;
+    font-size: var( --size-text);
 }
 
 .dataContacts {
