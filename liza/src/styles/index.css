@@ -1,4 +1,3 @@
-/*общие стили*/
 @import '../styles/variables.css';
 
 .navItems {
@@ -12,17 +11,11 @@
 
 .navList {
   text-decoration: none;
-  display: flex; /* ← делает список горизонтальным */
+  display: flex; 
    justify-content: space-between;
-
 }
 
 .textSection {
   font-family: var(--all-text);
   font-size: var(--size-text);
 }
-
-
-/* .smallHeadlines {
-  font-size: var(--size-subtitle);
-} */

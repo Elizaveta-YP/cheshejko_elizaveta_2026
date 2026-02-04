@@ -8,10 +8,8 @@ import travel from '../images/travel.jpg';
 import Stars from '../components/Stars';
 
 const AboutMe = () => {
-    //Состояние для отслеживания открытых карточек
     const [openCards, setOpenCards] = useState({});
 
-    //Функция для переключения состояния карточки
     const toggleCard = (cardId) => {
         setOpenCards(prev => ({
             ...prev,
@@ -19,7 +17,6 @@ const AboutMe = () => {
         }));
     };
 
-    // Данные для всех разделов
     const sectionsData = [
         { 
             id: 1, 
@@ -73,11 +70,9 @@ const AboutMe = () => {
                         <div className={`hobbyCard ${openCards[1] ? 'open' : ''}`}>
                             <h4 className="smallHeadlines">Спорт и здоровье</h4>
 
-                            {/*Показ картинки в зависимости от состояния*/}
                             {!openCards[1] ? (
                                 <div
                                     className="cardImageContainer"
-                                    // onClick={() => toggleCard(1)}
                                 >
                                 <img 
                                     src={sport}
@@ -112,11 +107,9 @@ const AboutMe = () => {
                         <div className={`hobbyCard ${openCards[2] ? 'open' : ''}`}>
                             <h4 className="smallHeadlines">Чтение и саморазвитие</h4>
 
-                             {/*Показ картинки в зависимости от состояния*/}
                              {!openCards[2] ? (
                                 <div
                                     className="cardImageContainer"
-                                    // onClick={() => toggleCard(2)}
                                 >
                                 <img 
                                 src={reading}
@@ -151,11 +144,9 @@ const AboutMe = () => {
                         <div className={`hobbyCard ${openCards[3] ? 'open' : ''}`}>
                             <h4 className="smallHeadlines">Природа и путешествия</h4>
 
-                            {/*Показ картинки в зависимости от состояния*/}
                              {!openCards[3] ? (
                                 <div 
                                     className="cardImageContainer"
-                                    // onClick={() => toggleCard(3)}
                                 >
                             <img 
                                 src={travel}
@@ -197,7 +188,6 @@ const AboutMe = () => {
          <Stars />
     
   <div className="about-me-container" style={{ position: 'relative' }}>
-    {/* <Stars /> */}
     <div className="about-me-wrapper">
       <div className="aboutMeContent">  
         {sectionsData.map(section => (

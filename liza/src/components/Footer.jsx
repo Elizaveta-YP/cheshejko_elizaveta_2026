@@ -3,8 +3,8 @@ const Footer = ({ onNavClick }) => {
         { label: 'Главная', href: '#', section: null },
         { label: 'Обо мне', href: '#', section: 'about' },
         { label: 'Ключевые навыки', href: '#', section: 'skills' },
-        { label: 'Проекты', href: '#', section: 'project' },  // ← ДОБАВЛЕНА ЗАПЯТАЯ
-        { label: 'Контакты', href: '#', section: 'contact' }  // ← ДОБАВЛЕНА {
+        { label: 'Проекты', href: '#', section: 'project' }, 
+        { label: 'Контакты', href: '#', section: 'contact' }  
     ];
 
     const handleNavClick = (e, section) => {
@@ -14,10 +14,8 @@ const Footer = ({ onNavClick }) => {
                 onNavClick(section);
             }
             
-            // Попробуйте разные селекторы:
             const element = document.querySelector(`.accordionSection[data-section="${section}"]`);
             if (!element) {
-                // Альтернативный поиск
                 const altElement = document.querySelector(`[data-section="${section}"]`);
                 if (altElement) {
                     altElement.scrollIntoView({ behavior: 'smooth', block: 'start' });

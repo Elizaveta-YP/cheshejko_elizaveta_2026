@@ -16,33 +16,23 @@ import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Contacts from './components/Contacts';
 
-
-
-
-
-
-
 function App() {
   const [expandedSections, setExpandedSections] = useState({
     about: false,   
     skills: false,
     project: false,
-    contact: true
+    contact: false
   });
 
   const [isWhiteLaptop, setIsWhiteLaptop] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false); // Новое состояние для анимации
+  const [isAnimating, setIsAnimating] = useState(false); 
   const laptopRef = useRef(null);
-
-  // Функция для кликов на заголовки секций
   const handleSectionClick = (section) => {
     setExpandedSections(prev => {
       const newState = { ...prev };
       
-      // Переключаем состояние кликнутой секции
       newState[section] = !prev[section];
       
-      // Если мы открываем секцию, закрываем все остальные
       if (newState[section]) {
         Object.keys(newState).forEach(key => {
           if (key !== section) {
@@ -55,55 +45,42 @@ function App() {
     });
   };
 
-  // Функция для клика по ноутбуку - переключаем картинку
   const handleLaptopClick = () => {
-    if (isAnimating) return; // Защита от повторных кликов во время анимации
+    if (isAnimating) return; 
     
-    // Начинаем анимацию
     setIsAnimating(true);
     
-    // Переключаем состояние ноутбука
     setIsWhiteLaptop(!isWhiteLaptop);
-    
-    // Анимация клика
+  
     if (laptopRef.current) {
-      // Сохраняем текущую трансформацию
       const currentTransform = laptopRef.current.style.transform;
-      
-      // Шаг 1: Уменьшение и изменение обводки
       laptopRef.current.style.transform = currentTransform + ' scale(0.8)';
       laptopRef.current.style.opacity = '0.7';
-      
-      // Цветная обводка при переключении
+
       if (!isWhiteLaptop) {
-        // При переключении на белый ноутбук - синяя обводка
         laptopRef.current.style.boxShadow = `
           0 0 0 20px rgba(88, 185, 176, 0.9),
           0 0 0 40px rgba(88, 185, 176, 0.6),
           0 0 0 60px rgba(88, 185, 176, 0.3)
         `;
       } else {
-        // При переключении на обычный ноутбук - белая обводка
         laptopRef.current.style.boxShadow = `
           0 0 0 20px rgba(255, 255, 255, 0.9),
           0 0 0 40px rgba(255, 255, 255, 0.6),
           0 0 0 60px rgba(255, 255, 255, 0.3)
         `;
       }
-      
-      // Шаг 2: Возвращаем размер и плавно убираем обводку
+
       setTimeout(() => {
         if (laptopRef.current) {
           laptopRef.current.style.transform = currentTransform;
           laptopRef.current.style.opacity = '1';
-          
-          // Плавно уменьшаем обводку
+
           setTimeout(() => {
             if (laptopRef.current) {
-              // Даем handleScroll обновить обводку на основе новой isWhiteLaptop
               const event = new Event('scroll');
               window.dispatchEvent(event);
-              setIsAnimating(false); // Завершаем анимацию
+              setIsAnimating(false); 
             }
           }, 200);
         }
@@ -113,7 +90,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!laptopRef.current || isAnimating) return; // Не обновляем во время анимации
+      if (!laptopRef.current || isAnimating) return; 
       
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -131,38 +108,31 @@ function App() {
       const verticalMovement = scrollProgress * maxVerticalMovement;
       const horizontalMovement = scrollProgress * maxHorizontalMovement;
       const scale = startScale + (endScale - startScale) * scrollProgress;
-      
-      // Интенсивность обводки (0 в начале, 1 в конце)
+   
       const outlineIntensity = Math.max(0, (scrollProgress - 0.7) / 0.3);
       
-      // Применяем трансформации
       laptopRef.current.style.transform = `
         translate(calc(-50% + ${horizontalMovement}px), calc(-50% + ${verticalMovement}px))
         rotate(${rotation}deg)
         scale(${scale})
       `;
       
-      // Разная обводка для разных ноутбуков (только если не в процессе анимации)
       if (!isAnimating) {
         if (isWhiteLaptop) {
-          // Для белого ноутбука - светло-голубая обводка
           laptopRef.current.style.boxShadow = `
             0 0 0 ${outlineIntensity * 20}px rgba(166, 229, 224, 0.5),
             0 0 ${outlineIntensity * 30}px ${outlineIntensity * 40}px rgba(166, 229, 224, 0.3),
             0 0 ${outlineIntensity * 40}px ${outlineIntensity * 50}px rgba(166, 229, 224, 0.1)
           `;
           
-          // Добавляем белую обводку для контраста
           laptopRef.current.style.outline = `${outlineIntensity * 3}px solid rgba(255, 255, 255, 0.8)`;
           laptopRef.current.style.outlineOffset = `${outlineIntensity * 5}px`;
         } else {
-          // Для обычного ноутбука - стандартная обводка
           laptopRef.current.style.boxShadow = `
             0 0 0 ${outlineIntensity * 20}px rgba(88, 185, 176, 0.3),
             0 0 ${outlineIntensity * 30}px ${outlineIntensity * 40}px rgba(88, 185, 176, 0.2),
             0 0 ${outlineIntensity * 40}px ${outlineIntensity * 50}px rgba(88, 185, 176, 0.1)
           `;
-          
           laptopRef.current.style.outline = 'none';
         }
       }
@@ -180,7 +150,7 @@ function App() {
     handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isWhiteLaptop, isAnimating]); // Добавили зависимость от isAnimating
+  }, [isWhiteLaptop, isAnimating]); 
 
   return (
     <div className="App">

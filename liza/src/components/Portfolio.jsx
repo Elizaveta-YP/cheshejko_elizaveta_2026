@@ -45,7 +45,6 @@ const Portfolio = () => {
                         <li className="practicalSkills">Работу с современными CSS-технологиями</li>
                         <li className="practicalSkills">Семантическую верстку и организацию кода</li>
                     </ul>
-                {/* </p> */}
                 </div>
              ),
             image: do_you_need_it, 
@@ -147,7 +146,6 @@ const Portfolio = () => {
 
     return (
         <div className="portfolio" style={{ position: 'relative', overflow: 'hidden' }}>
-            {/* Добавляем конфетти на фон */}
             <Confetti />
             <h3 className="titlePortfolio">Портфолио</h3>
             
@@ -159,11 +157,11 @@ const Portfolio = () => {
                     centeredSlides={true}
                     slidesPerView={'auto'}
                     coverflowEffect={{
-                        rotate: 0, // Убрали вращение
-                        stretch: 0, // Убрали растяжение
-                        depth: 100, // Глубина эффекта
-                        modifier: 2.5, // Модификатор эффекта
-                        slideShadows: true, // Тени слайдов
+                        rotate: 0, 
+                        stretch: 0, 
+                        depth: 100, 
+                        modifier: 2.5, 
+                        slideShadows: true, 
                     }}
                     navigation
                     pagination={{ 

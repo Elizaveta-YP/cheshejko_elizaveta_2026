@@ -1,7 +1,5 @@
-/*универсальные переменные*/
 :root {
     /*цвета*/
-    /* --highlight: #CEACE1; */
     --title: #DE3A87;
     --text: #3A3DDE;
     --standOut: #fff;
@@ -11,12 +9,14 @@
     /*размеры*/
     --size-title: 36px;
     --size-subtitle: 24px;
+    --subtitle: 22px;
     --size-text: 24px;
     --size-button: 18px;
     --size-link: 19px;
+    --link: 16px;
     /*толщина*/
     --weight: 600; 
-    /*тени*/
+ 
 
 
 

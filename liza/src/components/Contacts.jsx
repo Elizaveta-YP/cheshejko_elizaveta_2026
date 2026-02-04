@@ -7,7 +7,7 @@ import Phone from '../components/Phone';
 const Contacts = () => {
     const [copied, setCopied] = useState(false);
     const [copyType, setCopyType] = useState('');
-    const [showMap, setShowMap] = useState(false);
+    const [showMap, setShowMap] = useState(true);
     
     const handleCopy = async (text, type) => {
         try {
@@ -15,7 +15,6 @@ const Contacts = () => {
             setCopied(true);
             setCopyType(type);
 
-            /* Скрываем уведомления через 2 секунды */
             setTimeout(() => {
                 setCopied(false);
             }, 2000);
@@ -36,10 +35,8 @@ const Contacts = () => {
 
     return (
         <div style={{ position: 'relative', overflow: 'hidden', minHeight: '600px' }}>
-            {/* Добавляем падающие телефоны на фон */}
             <Phone />
             
-            {/* Контент с повышенным z-index */}
             <div style={{ position: 'relative', zIndex: 10 }}>
                 <h3 className='titleContacts'>
                     Контакты
@@ -80,15 +77,12 @@ const Contacts = () => {
                     </button>
                 </div>
                 
-                {/* Уведомление о копировании */}
                 {copied && (
                     <div className="copyNotification">
                         {copyType === 'email' ? 'Email скопирован!' : 'Telegram скопирован!'}
                     </div>
                 )}
 
-                {/* Модальное окно с картой */}
-                 {/* Модальное окно с картой */}
       {showMap && (
         <div className="map-modal-overlay" onClick={() => setShowMap(false)}>
           <div className="mapModalContent" onClick={(e) => e.stopPropagation()}>

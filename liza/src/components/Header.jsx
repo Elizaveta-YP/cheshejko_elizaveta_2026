@@ -15,7 +15,6 @@ const Header = ({ onNavClick }) => {
             e.preventDefault();
             onNavClick(section);
             
-            // Плавная прокрутка к секции
             const element = document.querySelector(`.accordion-section[data-section="${section}"]`);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });

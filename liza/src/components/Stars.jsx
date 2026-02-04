@@ -1,8 +1,6 @@
-// components/Stars.jsx
 import '../styles/Stars.css';
 
 const Stars = () => {
-  // Создаем звезды, которые начинаются выше экрана
   const stars = Array.from({ length: 150 }, (_, i) => {
     const startTop = Math.random() * 100;
     const endTop = 100 + Math.random() * 100;
@@ -24,7 +22,6 @@ const Stars = () => {
     };
   });
 
-  // Большие яркие звезды (тоже падают)
   const bigStars = Array.from({ length: 30 }, (_, i) => {
     const startTop = 50 + Math.random() * 100;
     const endTop = 200 + Math.random() * 200;
@@ -46,10 +43,8 @@ const Stars = () => {
 
   return (
     <div className="golden-stars-background">
-      {/* Фоновый градиент для космоса */}
       <div className="space-gradient"></div>
       
-      {/* Маленькие падающие звездочки */}
       {stars.map(star => (
         <div
           key={star.id}
@@ -69,7 +64,6 @@ const Stars = () => {
         />
       ))}
       
-      {/* Большие падающие звезды */}
       {bigStars.map(star => (
         <div
           key={star.id}
@@ -89,7 +83,6 @@ const Stars = () => {
         </div>
       ))}
       
-      {/* Специальные падающие звезды (метеоры) */}
       {Array.from({ length: 5 }, (_, i) => ({
         id: `meteor-${i}`,
         left: `${Math.random() * 100}%`,

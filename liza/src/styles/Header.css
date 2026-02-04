@@ -1,7 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Third+Street&display=swap'); */
 @import "../styles/variables.css";
 .logo {
-  /* background-color: var(--highlight); */
   background-color: var(--standOut);
   color: var(--title);
   font-family: var(--header-h1), sans-serif;
@@ -12,29 +10,16 @@
   margin: 0;
   padding-block: 30px;
 
-  /*полукруг*/
-
   clip-path: polygon(
-    /* 0% 0%,
-        100% 0%,
-        100% 85%,
-        90% 90%,
-        75% 95%,
-        50% 100%,
-        25% 95%,
-        10% 90%,
-        0% 85% */
     0% 0%,
-    /* верхний левый */ 100% 0%,
-    /* верхний правый */ 100% 75%,
-
-    /* правый верхний угол восьмиугольника */
-    /* Восьмиугольная нижняя часть (8 сторон) */ 100% 85%,
-    /* ↘ правый верхний скос */ 85% 100%,
-    /* ↓ правая вертикальная сторона */ 50% 100%,
-    /* ← нижняя горизонтальная сторона (центр) */ 15% 100%,
-    /* ↑ левая вертикальная сторона */ 0% 85%,
-    /* ↖ левый верхний скос */ 0% 75% /* левый верхний угол восьмиугольника */
+    100% 0%,
+    100% 75%,
+    100% 85%,
+    85% 100%,
+    50% 100%,
+    15% 100%,
+    0% 85%,
+    0% 75% 
   );
 }
 
@@ -45,37 +30,27 @@
   overflow: hidden;
 }
 
-
 .headers {
   width: 100%;
   position: sticky; 
   top: 0; 
   z-index: 1000; 
- 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-
-
    background-color: rgba(88, 185, 176, 0.3); 
   backdrop-filter: blur(15px);
   border-radius: 20px;
   border: 1px solid rgba(88, 185, 176, 0.2);
 }
 
-/* Чтобы навигация тоже была sticky, если нужно */
 .nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-block: 20px;
-  position: sticky;
-  top: 80px;
-  z-index: 999;
-  padding: 10px 0;
-  
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+
 .navItems {
-  /* margin-inline-end: 35px; */
    margin-inline: 20px;
    margin-block: 8px;
    font-size: var(--size-subtitle);
@@ -94,7 +69,6 @@
   color: #fff;
 }
 
-
 @media (max-width: 756px) {
   .navItems {
     margin-inline: 10px;
@@ -103,11 +77,9 @@
 
 @media (max-width: 480px) {
   .logo {
-    font-size: calc(var(--size-title) * 0.7); /* Уменьшаем размер шрифта */
-    padding-block: 20px; /* Уменьшаем отступы */
-    margin-bottom: -15px; /* Поднимаем ближе к навигации */
-    
-    /* Упрощаем форму для мобильных */
+    font-size: calc(var(--size-title) * 0.7); 
+    padding-block: 20px; 
+    margin-bottom: -15px; 
     clip-path: polygon(
       0% 0%,
       100% 0%,
@@ -121,17 +93,17 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(88, 185, 176, 0.4); /* Немного насыщеннее */
+    background-color: rgba(88, 185, 176, 0.4); 
     backdrop-filter: blur(10px);
-    border-radius: 0 0 15px 15px; /* Меньшее скругление */
+    border-radius: 0 0 15px 15px; 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 5px 0;
   }
 
   .nav {
-    margin-block: 10px; /* Уменьшаем отступы */
+    margin-block: 10px; 
     position: sticky;
-    top: 60px; /* Меньший отступ от верха */
+    top: 60px; 
     z-index: 999;
     padding: 5px 0;
     width: 95%;
@@ -145,26 +117,26 @@
     padding: 3px 8px;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto; /* Горизонтальная прокрутка если не помещается */
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Скрываем скроллбар Firefox */
+    scrollbar-width: none; 
   }
 
   .navList::-webkit-scrollbar {
-    display: none; /* Скрываем скроллбар Chrome/Safari */
+    display: none; 
   }
 
   .navItems {
-    margin-inline: 8px; /* Уменьшаем отступы между пунктами */
+    margin-inline: 8px; 
     margin-block: 5px;
-    font-size: calc(var(--size-subtitle) * 0.8); /* Уменьшаем размер шрифта */
-    white-space: nowrap; /* Запрещаем перенос текста */
-    flex-shrink: 0; /* Не сжимаем элементы */
+    font-size: calc(var(--size-subtitle) * 0.8); 
+    white-space: nowrap; 
+    flex-shrink: 0; 
   }
 
   .navLink {
     color: white;
-    padding: 6px 12px; /* Увеличиваем область клика */
+    padding: 6px 12px; 
     display: block;
     border-radius: 10px;
     transition: all 0.2s ease;
@@ -176,10 +148,6 @@
     background-color: rgba(255, 255, 255, 0.2);
     color: #FCEBEB;
   }
-
-  
-
-
 
    .logo {
     font-size: calc(var(--size-title) * 0.7);
@@ -206,49 +174,45 @@
   }
 
   .nav {
-    
-    position: relative; /* Меняем sticky на relative */
-    top: auto; /* Сбрасываем sticky позиционирование */
+    position: relative; 
+    top: auto; 
     z-index: 999;
     padding: 5px 0;
     width: 100%;
-    max-width: 280px; /* Ограничиваем ширину */
+    max-width: 280px; 
     margin-left: auto;
     margin-right: auto;
     margin-block: 0;
    
   }
 
-  /* Делаем навигацию вертикальной */
   .navList {
-    
     border-radius: 15px;
-    padding: 10px 0; /* Внутренние отступы сверху и снизу */
+    padding: 10px 0; 
     display: flex;
-    flex-direction: column; /* Вертикальное расположение */
-    align-items: stretch; /* Растягиваем на всю ширину */
-    overflow: visible; /* Убираем горизонтальную прокрутку */
+    flex-direction: column; 
+    align-items: stretch; 
+    overflow: visible; 
     width: 100%;
   }
 
   .navItems {
-    margin: 0; /* Убираем горизонтальные отступы */
-    margin-bottom: 5px; /* Добавляем вертикальные отступы */
+    margin: 0; 
+    margin-bottom: 5px; 
     font-size: calc(var(--size-subtitle) * 0.8);
-    white-space: normal; /* Разрешаем перенос текста */
-    text-align: center; /* Центрируем текст */
+    white-space: normal; 
+    text-align: center; 
     width: 100%;
     max-height: 22px;
   }
 
-  /* Последний элемент без отступа снизу */
   .navItems:last-child {
     margin-bottom: 0;
   }
 
   .navLink {
     color: white;
-    padding: 12px 20px; /* Увеличиваем отступы для удобства касания */
+    padding: 12px 20px; 
     display: block;
     border-radius: 10px;
     transition: all 0.2s ease;
@@ -264,5 +228,3 @@
     color: #FCEBEB;
   }
 }
-
-

@@ -1,8 +1,6 @@
-// components/CSSConfetti.jsx
 import '../styles/Confetti.css';
 
 const Confetti = () => {
-  // Создаем 80 частиц конфетти
   const particles = Array.from({ length: 80 }, (_, i) => ({
     id: i,
     left: `${Math.random() * 100}%`,

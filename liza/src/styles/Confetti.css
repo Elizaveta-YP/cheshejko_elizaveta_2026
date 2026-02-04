@@ -1,4 +1,3 @@
-/* CSSConfetti.css */
 .css-confetti {
   position: absolute;
   top: 0;
@@ -36,7 +35,6 @@
   }
 }
 
-/* Разное боковое движение для разных частиц */
 .confetti-particle:nth-child(odd) {
   --sway: 1;
 }
@@ -45,7 +43,6 @@
   --sway: -1;
 }
 
-/* Добавляем небольшую пульсацию */
 @keyframes pulse {
   0%, 100% { opacity: 0.8; }
   50% { opacity: 1; }

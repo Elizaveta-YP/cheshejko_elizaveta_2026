@@ -1,7 +1,6 @@
 import '../styles/Phone.css';
 
 const Phone = () => {
-  // Создаем фиксированное количество телефонов как в Confetti
   const phones = Array.from({ length: 10 }, (_, i) => ({
     id: i,
     left: `${Math.random() * 100}%`,
@@ -15,7 +14,6 @@ const Phone = () => {
     phoneColor: `rgba(88, 185, 176, ${0.5 + Math.random() * 0.4})`
   }));
 
-  // Создаем фиксированное количество символов
   const symbols = Array.from({ length: 25 }, (_, i) => ({
     id: `symbol-${i}`,
     left: `${Math.random() * 100}%`,
@@ -28,10 +26,8 @@ const Phone = () => {
 
   return (
     <div className="falling-phones-background">
-      {/* Фоновый градиент */}
       <div className="phones-gradient"></div>
       
-      {/* Падающие телефоны - БЕСКОНЕЧНАЯ АНИМАЦИЯ */}
       {phones.map(phone => (
         <div
           key={phone.id}
@@ -57,7 +53,6 @@ const Phone = () => {
         </div>
       ))}
       
-      {/* Символы связи - БЕСКОНЕЧНАЯ АНИМАЦИЯ */}
       {symbols.map(symbol => (
         <div
           key={symbol.id}

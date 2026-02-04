@@ -10,34 +10,26 @@
 
 .smallHeadlinesContact {
   font-size: var(--size-subtitle);
-   /* display: flex;
-    align-items: center;
-    justify-content: center; */
     order: 1;
     color: #58b9b0;
 }
 
 .textContacts {
-    margin-inline: 150px;
+    margin-inline: 120px;
     margin-block: 40px;
     font-size: var( --size-text);
      background: var(--standOut);
+     opacity: 0.9;
+     border-radius: 20px;
 }
 
 .dataContacts {
-     /* display: flex;
-    align-items: center;
-    justify-content: center; */
     order: 2;
      font-size: var(--size-link);
 }
 
 .section {
-    /* display: flex;
-    flex-direction: row; */
     display: grid;
-    /* grid-column: 3;
-    grid-row: 2; */
     grid-template-columns: 25% 25% 25%;
     column-gap: 90px;
     row-gap:15px;
@@ -54,12 +46,13 @@
 .copyLink {
     text-decoration: none;
     color: black;
-    /* font-size: var(--size-text); */
+    font-size: var(--link);
 }
 
 .city {
     border: none;
     background-color: white;
+    border-radius: 20px;
 }
 
 .mapModalContent {
@@ -77,11 +70,7 @@
     background-color: #a6e5e0;
 }
 
-/* @media (max-width: 768px) {
-
-} */
 @media (max-width: 768px) {
-  /* Общие настройки */
   .titleContacts {
     font-size: calc(var(--size-title) * 0.8);
     margin: 30px 20px;
@@ -95,8 +84,6 @@
     text-align: center;
     line-height: 1.6;
   }
-  
-  /* Секция с контактами */
  
     .section {
         grid-template-columns: repeat(3, 30%);
@@ -104,19 +91,16 @@
         gap: 20px;
     }
 
-
-/* Каждый контактный блок */
 .section > * {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 1; /* Равная ширина */
+    flex: 1; 
     margin: 0;
-    max-width: 300px; /* Максимальная ширина блока */
+    max-width: 300px; 
 }
   
-  /* Каждая пара заголовок-данные как отдельный блок */
   .smallHeadlinesContact {
     font-size: calc(var(--size-subtitle) * 0.9);
     text-align: center;
@@ -126,7 +110,6 @@
     order: 1;
   }
   
-  /* Данные контактов */
   .dataContacts {
     font-size: calc(var(--size-link) * 0.95);
     text-align: center;
@@ -138,7 +121,7 @@
     transition: all 0.3s ease;
     margin-bottom: 15px;
     width: 100%;
-    max-width: 300px; /* Ограничиваем ширину */
+    max-width: 300px; 
     box-sizing: border-box;
     border: 2px solid transparent;
   }
@@ -148,7 +131,6 @@
     border-color: rgba(88, 185, 176, 0.3);
   }
   
-  /* Кнопка города */
   .city {
     cursor: pointer;
     font-size: calc(var(--size-link) * 0.95);
@@ -167,7 +149,6 @@
     border-color: rgba(88, 185, 176, 0.3);
   }
   
-  /* Ссылки для копирования */
   .copyLink {
     text-decoration: none;
     color: #333;
@@ -178,14 +159,12 @@
     font-size: 12px;
   }
   
-  /* Эффект при нажатии для мобильных */
   .copyLink:active,
   .city:active {
     transform: scale(0.98);
     background-color: rgba(88, 185, 176, 0.3);
   }
   
-  /* Уведомление о копировании */
   .copyNotification {
     position: fixed;
     top: 20px;
@@ -203,7 +182,6 @@
   }}
 
   @media (max-width: 480px) {
-  /* Общие настройки */
   .titleContacts {
     font-size: calc(var(--size-title) * 0.7);
     margin: 25px 15px;
@@ -218,17 +196,15 @@
     line-height: 1.5;
   }
   
-  /* Секция с контактами - переключаемся на одну колонку */
   .section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-inline: 15px;
     gap: 25px;
-    grid-template-columns: 1fr; /* Переопределяем grid */
+    grid-template-columns: 1fr; 
   }
   
-  /* Каждый контактный блок занимает всю ширину */
   .section > * {
     display: flex;
     flex-direction: column;
@@ -239,7 +215,6 @@
     margin: 0 auto;
   }
   
-  /* Заголовки контактов */
   .smallHeadlinesContact {
     font-size: calc(var(--size-subtitle) * 0.85);
     text-align: center;
@@ -249,7 +224,6 @@
     order: 1;
   }
   
-  /* Данные контактов */
   .dataContacts {
     font-size: calc(var(--size-link) * 0.9);
     text-align: center;
@@ -264,10 +238,9 @@
     max-width: 100%;
     box-sizing: border-box;
     border: 2px solid transparent;
-    word-break: break-word; /* Перенос длинных слов */
+    word-break: break-word; 
   }
   
-  /* Ссылки для копирования */
   .copyLink {
     text-decoration: none;
     color: #333;
@@ -279,7 +252,6 @@
     width: 100%;
   }
   
-  /* Кнопка города */
   .city {
     cursor: pointer;
     font-size: calc(var(--size-link) * 0.9);
@@ -292,14 +264,12 @@
     box-sizing: border-box;
   }
   
-  /* Эффект при нажатии для мобильных */
   .copyLink:active,
   .city:active {
     transform: scale(0.98);
     background-color: rgba(88, 185, 176, 0.3);
   }
   
-  /* Уведомление о копировании */
   .copyNotification {
     position: fixed;
     top: 15px;
@@ -326,7 +296,6 @@
     100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
   }
   
-  /* Модальное окно с картой */
   .map-modal-overlay {
     position: fixed;
     top: 0;
