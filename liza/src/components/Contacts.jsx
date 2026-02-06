@@ -1,5 +1,5 @@
 import '../styles/Contacts.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 import Phone from '../components/Phone';
@@ -8,7 +8,22 @@ const Contacts = () => {
     const [copied, setCopied] = useState(false);
     const [copyType, setCopyType] = useState('');
     const [showMap, setShowMap] = useState(true);
-    
+     useEffect(() => {
+  
+        const checkScreenWidth = () => {
+            if (window.innerWidth <= 429) {
+                setShowMap(false); 
+            } else {
+                setShowMap(true); 
+            }
+        };
+        
+        checkScreenWidth();
+        
+        window.addEventListener('resize', checkScreenWidth);
+ 
+        return () => window.removeEventListener('resize', checkScreenWidth);
+    }, []);
     const handleCopy = async (text, type) => {
         try {
             await navigator.clipboard.writeText(text);
