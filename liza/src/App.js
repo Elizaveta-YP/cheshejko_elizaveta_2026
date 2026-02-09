@@ -12,7 +12,6 @@ import whiteLaptop from './images/whiteLaptop.png';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
-import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Contacts from './components/Contacts';
 
@@ -243,8 +242,6 @@ function App() {
           transition: 'box-shadow 0.3s ease, outline 0.3s ease, transform 0.3s ease, opacity 0.3s ease'
         }}
       />
-      
-      <Footer onNavClick={handleSectionClick} />
     </div>
   );
 }
