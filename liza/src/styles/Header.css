@@ -21,6 +21,19 @@
     0% 85%,
     0% 75%
   );
+    background: linear-gradient(
+      90deg,
+      rgba(255, 182, 193, 0.8),
+      rgba(255, 218, 185, 0.8),
+      rgba(255, 255, 204, 0.8),
+      rgba(204, 255, 204, 0.8),
+      rgba(204, 255, 255, 0.8),
+      rgba(204, 204, 255, 0.8),
+      rgba(230, 204, 255, 0.8),
+      rgba(255, 182, 193, 0.8)
+    );
+     background-size: 400% 100%;
+     animation: rainbowMove 10s linear infinite;
 }
 
 .header {
@@ -47,6 +60,9 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navItems {
@@ -59,16 +75,12 @@
   color: #f2caca;
 }
 
-.navList {
-  background-color: var(--title);
-  border-radius: 20px;
-}
-
 .navLink {
   color: #fff;
+  font-size: var(--link);
 }
 
-@media (max-width: 756px) {
+@media (max-width: 768px) {
   .navItems {
     margin-inline: 10px;
   }
@@ -80,15 +92,16 @@
     padding-block: 20px;
     margin-bottom: -15px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 95%, 0% 80%);
-    background: linear-gradient(90deg, 
-      rgba(255, 182, 193, 0.8),    
-      rgba(255, 218, 185, 0.8),    
-      rgba(255, 255, 204, 0.8),    
-      rgba(204, 255, 204, 0.8),   
-      rgba(204, 255, 255, 0.8),   
-      rgba(204, 204, 255, 0.8),   
-      rgba(230, 204, 255, 0.8),    
-      rgba(255, 182, 193, 0.8)     
+    background: linear-gradient(
+      90deg,
+      rgba(255, 182, 193, 0.8),
+      rgba(255, 218, 185, 0.8),
+      rgba(255, 255, 204, 0.8),
+      rgba(204, 255, 204, 0.8),
+      rgba(204, 255, 255, 0.8),
+      rgba(204, 204, 255, 0.8),
+      rgba(230, 204, 255, 0.8),
+      rgba(255, 182, 193, 0.8)
     );
     background-size: 400% 100%;
   }
@@ -124,7 +137,7 @@
     pointer-events: none;
   }
 
- .navList {
+  .navList {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -135,22 +148,23 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    background: linear-gradient(90deg, 
-      rgba(255, 182, 193, 0.8),   
-      rgba(255, 218, 185, 0.8),   
-      rgba(255, 255, 204, 0.8),   
-      rgba(204, 255, 204, 0.8),    
-      rgba(204, 255, 255, 0.8),   
-      rgba(204, 204, 255, 0.8),    
-      rgba(230, 204, 255, 0.8),    
-      rgba(255, 182, 193, 0.8)     
+    background: linear-gradient(
+      90deg,
+      rgba(255, 182, 193, 0.8),
+      rgba(255, 218, 185, 0.8),
+      rgba(255, 255, 204, 0.8),
+      rgba(204, 255, 204, 0.8),
+      rgba(204, 255, 255, 0.8),
+      rgba(204, 204, 255, 0.8),
+      rgba(230, 204, 255, 0.8),
+      rgba(255, 182, 193, 0.8)
     );
     background-size: 400% 100%;
     animation: rainbowMove 10s linear infinite;
     padding: 2px;
     position: relative;
   }
-  
+
   .navList > li {
     background-color: var(--title);
     border-radius: 18px;
@@ -168,10 +182,10 @@
     font-size: calc(var(--size-subtitle) / 2.8);
     white-space: nowrap;
     flex-shrink: 0;
-     background-color: var( --title);
-     border-radius: 20px;
-  margin: 2px 0;
-  width: 60%;
+    background-color: var(--title);
+    border-radius: 20px;
+    margin: 2px 0;
+    width: 60%;
   }
 
   .navLink {
@@ -185,7 +199,6 @@
     width: 100%;
     box-sizing: border-box;
     max-height: 17px;
-
   }
 
   .navLink:hover,
@@ -222,13 +235,14 @@
   }
 
   @keyframes rainbowMove {
-  0% {
-    background-position: 0% 50%;
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }}
 }

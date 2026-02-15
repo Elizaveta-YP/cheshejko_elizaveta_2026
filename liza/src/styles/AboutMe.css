@@ -34,13 +34,11 @@
   background: linear-gradient(white, white) padding-box,
   linear-gradient(45deg, #ff69b4, #ff1493) border-box;
   padding: 5px;
-
-   min-height: 600px; 
-  min-width: 400px;  
+   min-height: 550px;
+  min-width: 360px;
   max-width: 100%;   
   object-fit: cover; 
   border-radius: 20px; 
-
 }
 
 .smallHeadlines {
@@ -175,11 +173,6 @@
   min-height: 40px; 
   width: 90%; 
   align-self: center; 
-}
-
-.profilePhoto {
-  min-height: 550px;
-  min-width: 360px
 }
 
 .textSection {
