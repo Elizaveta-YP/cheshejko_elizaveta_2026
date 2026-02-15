@@ -21,19 +21,19 @@
     0% 85%,
     0% 75%
   );
-    background: linear-gradient(
-      90deg,
-      rgba(255, 182, 193, 0.8),
-      rgba(255, 218, 185, 0.8),
-      rgba(255, 255, 204, 0.8),
-      rgba(204, 255, 204, 0.8),
-      rgba(204, 255, 255, 0.8),
-      rgba(204, 204, 255, 0.8),
-      rgba(230, 204, 255, 0.8),
-      rgba(255, 182, 193, 0.8)
-    );
-     background-size: 400% 100%;
-     animation: rainbowMove 10s linear infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 182, 193, 0.8),
+    rgba(255, 218, 185, 0.8),
+    rgba(255, 255, 204, 0.8),
+    rgba(204, 255, 204, 0.8),
+    rgba(204, 255, 255, 0.8),
+    rgba(204, 204, 255, 0.8),
+    rgba(230, 204, 255, 0.8),
+    rgba(255, 182, 193, 0.8)
+  );
+  background-size: 400% 100%;
+  animation: rainbowMove 10s linear infinite;
 }
 
 .header {
@@ -140,7 +140,7 @@
   .navList {
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     overflow: visible;
@@ -148,28 +148,14 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 182, 193, 0.8),
-      rgba(255, 218, 185, 0.8),
-      rgba(255, 255, 204, 0.8),
-      rgba(204, 255, 204, 0.8),
-      rgba(204, 255, 255, 0.8),
-      rgba(204, 204, 255, 0.8),
-      rgba(230, 204, 255, 0.8),
-      rgba(255, 182, 193, 0.8)
-    );
-    background-size: 400% 100%;
-    animation: rainbowMove 10s linear infinite;
     padding: 2px;
     position: relative;
   }
 
   .navList > li {
-    background-color: var(--title);
     border-radius: 18px;
     margin: 2px 0;
-    width: 60%;
+    width: auto;
     position: relative;
     z-index: 1;
   }
@@ -182,7 +168,7 @@
     font-size: calc(var(--size-subtitle) / 2.8);
     white-space: nowrap;
     flex-shrink: 0;
-    background-color: var(--title);
+
     border-radius: 20px;
     margin: 2px 0;
     width: 60%;
@@ -190,7 +176,7 @@
 
   .navLink {
     color: white;
-    padding: 6px 12px;
+    padding: 10px 5px 15px 5px;
     display: block;
     border-radius: 10px;
     transition: all 0.2s ease;
@@ -199,6 +185,7 @@
     width: 100%;
     box-sizing: border-box;
     max-height: 17px;
+    font-size: 14px;
   }
 
   .navLink:hover,
