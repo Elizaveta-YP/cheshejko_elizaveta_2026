@@ -14,7 +14,6 @@ import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contacts from './components/Contacts';
-import YandexMetrika from './components/YandexMetrika';
 
 function App() {
   const [expandedSections, setExpandedSections] = useState({
@@ -154,7 +153,6 @@ function App() {
 
   return (
     <div className="App">
-      <YandexMetrika />
       <Header onNavClick={handleSectionClick} />
       
       <div className="main-content">
